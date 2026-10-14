@@ -31,6 +31,7 @@ class PageParser(HTMLParser):
         self.canonical = None
         self.meta: dict[str, str] = {}
         self.links: list[str] = []
+        self.alternates: list[tuple[str, str]] = []
         self.scripts_ld: list[str] = []
         self._in_ld = False
         self._ld_buf: list[str] = []
@@ -41,6 +42,8 @@ class PageParser(HTMLParser):
         if tag == "html":
             self.html_lang = a.get("lang")
         if tag == "link":
+            if a.get("rel") == "alternate" and a.get("hreflang"):
+                self.alternates.append((a["hreflang"], a.get("href")))
             if a.get("rel") == "canonical":
                 self.canonical = a.get("href")
             if a.get("href"):
@@ -70,6 +73,16 @@ class PageParser(HTMLParser):
             self._ld_buf.append(data)
 
 
+def expected_alternates(url: str) -> dict[str, str]:
+    """Each page links its Arabic and English twin, plus x-default (Arabic)."""
+    path = url[len(BASE):]
+    if path.startswith("en/"):
+        ar_path, en_path = path[3:], path
+    else:
+        ar_path, en_path = path, "en/" + path
+    return {"ar": BASE + ar_path, "en": BASE + en_path, "x-default": BASE + ar_path}
+
+
 def page_path(html_file: Path) -> str:
     rel = html_file.relative_to(DOCS).as_posix()
     if rel == "index.html":
@@ -88,6 +101,9 @@ def check_page(html_file: Path) -> None:
         err(f"{rel}: <html> is missing lang")
     if p.canonical != expected:
         err(f"{rel}: canonical is {p.canonical!r}, expected {expected!r}")
+    alternates = dict(p.alternates)
+    if alternates != expected_alternates(expected):
+        err(f"{rel}: hreflang links {alternates} do not match {expected_alternates(expected)}")
     if p.meta.get("og:url") != expected:
         err(f"{rel}: og:url is {p.meta.get('og:url')!r}, expected {expected!r}")
     if p.meta.get("twitter:card") != "summary_large_image":
