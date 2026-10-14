@@ -110,7 +110,7 @@ p { margin: 0; }
 .band .btn-ghost:hover { border-color: #fff; }
 
 /* install */
-.install-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; }
+.install-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
 .install-grid > div { border-top: 2px solid var(--navy); padding-top: 24px; }
 .install-grid h3 { margin-bottom: 12px; }
 .install-grid p, .install-grid li { color: var(--muted); font-size: 16px; }
