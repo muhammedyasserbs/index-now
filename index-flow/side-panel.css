@@ -422,6 +422,7 @@ input:focus, select:focus { background: #fff; border-color: #d9b47c !important; 
 
 footer { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 2px 18px 18px; color: #909bad; font-size: 9px; text-align: center; }
 .footer-credit { color: var(--secondary); font-weight: 800; letter-spacing: .04em; font-size: 10px; }
+.privacy-link { color: var(--primary); font-size: 9px; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
 
 .confirm-dialog { width: min(360px, calc(100vw - 30px)); padding: 0; color: var(--ink); background: #fff; border: 0; border-radius: 17px; box-shadow: var(--shadow-md); }
 .confirm-dialog::backdrop { background: rgba(12, 20, 34, .52); backdrop-filter: blur(3px); }
