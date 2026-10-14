@@ -84,6 +84,8 @@ p { margin: 0; }
 .feature .num { color: var(--gold-deep); font-weight: 800; font-size: 15px; }
 .feature h3 { margin: 8px 0 10px; }
 .feature p { color: var(--muted); }
+.feature p + p, .feature-list + p { margin-top: 10px; }
+.feature-list { margin: 10px 0 0; padding-inline-start: 20px; color: var(--muted); display: grid; gap: 6px; }
 
 /* steps */
 .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; counter-reset: none; }
