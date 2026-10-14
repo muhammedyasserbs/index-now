@@ -5,14 +5,131 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IndexFlow — Bulk indexing requests for Google Search Console</title>
 <meta name="description" content="A Chrome extension that queues Google Search Console indexing requests for your URLs, removes duplicates, controls pacing, and needs no account., removes duplicates, controls pacing, and needs no account.">
+<link rel="canonical" href="https://muhammedyasserbs.github.io/index-now/en/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://muhammedyasserbs.github.io/index-now/en/">
+<meta property="og:site_name" content="IndexFlow">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://muhammedyasserbs.github.io/index-now/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IndexFlow — Bulk indexing requests for Google Search Console">
+<meta name="twitter:description" content="A Chrome extension that queues Google Search Console indexing requests for your URLs, removes duplicates, controls pacing, and needs no account., removes duplicates, controls pacing, and needs no account.">
+<meta name="twitter:image" content="https://muhammedyasserbs.github.io/index-now/assets/img/og-image.png">
 <meta name="theme-color" content="#053960">
 <link rel="icon" href="../assets/img/icon-192x192.png" type="image/png">
 <link rel="stylesheet" href="../assets/site.css">
 <meta property="og:title" content="IndexFlow — Bulk indexing requests for Google Search Console">
 <meta property="og:description" content="A Chrome extension that queues Google Search Console indexing requests for your URLs, removes duplicates, controls pacing, and needs no account., removes duplicates, controls pacing, and needs no account.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="../assets/img/screenshot-4.png">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "IndexFlow",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome",
+  "browserRequirements": "Requires Google Chrome 116 or later",
+  "url": "https://muhammedyasserbs.github.io/index-now/en/",
+  "description": "A Chrome extension that queues Google Search Console indexing requests for your URLs, removes duplicates, controls pacing, and needs no account., removes duplicates, controls pacing, and needs no account.",
+  "inLanguage": "en",
+  "image": "https://muhammedyasserbs.github.io/index-now/assets/img/og-image.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Muhammed Yasser",
+    "url": "https://muhammedyasserbs.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/muhammed-yasser-seo-specialist/"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is IndexFlow free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. There is no paid plan and no hidden limit inside the extension."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I request indexing for many pages at once in Google Search Console?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IndexFlow queues the URLs you load and runs the same request steps for each one in Search Console, one at a time, with the delay you set. You don’t have to repeat the steps manually for every URL."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why isn’t Google indexing my pages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common causes: a noindex tag, a block in robots.txt, thin or duplicate content, or no internal links pointing to the page. Check each page with URL Inspection in Search Console first. A request alone does not guarantee indexing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an official Google API to request indexing for any URL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google’s official Indexing API is for JobPosting and BroadcastEvent pages only. IndexFlow works through the Search Console interface itself and does not use an API."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does Google indexing take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no guaranteed timeline. Google does not publish one, and processing can take hours or weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it guarantee that pages will appear in search results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. IndexFlow only submits indexing requests. Whether and how a page is indexed or ranked is decided by Google."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Search Console tab have to stay open?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and you must stay signed in. It is recommended to pin the tab and exclude it from Chrome’s memory saver so it does not freeze while the queue waits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when Google’s daily quota is reached?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google does not publish an official daily limit for indexing requests, and the extension never tries to bypass it (no account rotation, no multiple accounts). The queue stops completely, and the affected URLs stay reserved until midnight, when the quota resets. Google sets the quota; the extension respects it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the developer receive my data or my URLs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything is kept inside your browser. Full details are in the Privacy Policy."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -40,7 +157,7 @@
       <p class="fine">Free · No account required · Runs inside your browser</p>
     </div>
     <figure class="hero-media">
-      <img src="../assets/img/screenshot-4.png" alt="IndexFlow side panel showing queue statistics and the URL list" width="1280" height="800">
+      <img src="../assets/img/screenshot-4.webp" alt="IndexFlow side panel showing queue statistics and the URL list" width="1280" height="800">
     </figure>
   </div>
 </section>
@@ -65,7 +182,7 @@
       <article class="feature"><span class="num">01</span><h3>Add links in any way that suits you</h3><p>There are 3 ways:</p><ul class="feature-list"><li>A sitemap link. IndexFlow pulls all of your site’s pages from it by itself.</li><li>Paste the links yourself, one per line.</li><li>Upload a TXT, CSV or JSON file that contains the links.</li></ul><p>Every time you add links, they are added to your existing list (the queue, meaning the waiting list) without deleting the old ones.</p></article>
       <article class="feature"><span class="num">02</span><h3>Smart duplicate removal</h3><p>Duplicates inside the same batch, URLs already queued, and URLs requested before are filtered out. When a clean URL and a copy with extra parameters both appear, only the clean one is kept.</p></article>
       <article class="feature"><span class="num">03</span><h3>A mode for your goal</h3><p>“New only” sends pages that are not indexed yet. “Re-index” refreshes pages that are already indexed. “Both” combines the two in one run.</p></article>
-      <article class="feature"><span class="num">04</span><h3>Control over pacing</h3><p>A configurable delay between requests, and a safe skip for URLs that do not fit. When Google’s daily quota is reached, the queue stops completely and affected URLs stay reserved until the quota resets.</p></article>
+      <article class="feature"><span class="num">04</span><h3>Control over pacing</h3><p>A configurable delay between requests, and a safe skip for URLs that do not fit. IndexFlow never tries to go beyond Google’s daily limits. When Google shows a quota message, the queue stops completely and affected URLs stay reserved until the quota resets.</p></article>
       <article class="feature"><span class="num">05</span><h3>Live tracking</h3><p>Live counters for each status, search and filters, one-click URL copy, a full activity log, and CSV export with an encoding that displays Arabic correctly in Excel.</p></article>
       <article class="feature"><span class="num">06</span><h3>Safe stop on failure</h3><p>The extension watches the Search Console tab. If the tab is closed or frozen, the queue stops safely, the active URL returns to waiting, and the log explains what happened.</p></article>
     </div>
@@ -86,9 +203,9 @@
 
 <section class="section" style="padding-top:0" aria-label="Screenshots from the extension">
   <div class="wrap screens">
-    <figure><img src="../assets/img/screenshot-1.png" alt="Step one: entering a sitemap or URLs" width="1280" height="800" loading="lazy"></figure>
-    <figure><img src="../assets/img/screenshot-2.png" alt="Load summary with new and duplicate URL counts" width="1280" height="800" loading="lazy"></figure>
-    <figure><img src="../assets/img/screenshot-3.png" alt="Indexing mode and delay settings" width="1280" height="800" loading="lazy"></figure>
+    <figure><img src="../assets/img/screenshot-1.webp" alt="Step one: entering a sitemap or URLs" width="1280" height="800" loading="lazy"></figure>
+    <figure><img src="../assets/img/screenshot-2.webp" alt="Load summary with new and duplicate URL counts" width="1280" height="800" loading="lazy"></figure>
+    <figure><img src="../assets/img/screenshot-3.webp" alt="Indexing mode and delay settings" width="1280" height="800" loading="lazy"></figure>
   </div>
 </section>
 
@@ -141,7 +258,7 @@
       <details><summary>How long does Google indexing take?</summary><p>There is no guaranteed timeline. Google does not publish one, and processing can take hours or weeks.</p></details>
       <details><summary>Does it guarantee that pages will appear in search results?</summary><p>No. IndexFlow only submits indexing requests. Whether and how a page is indexed or ranked is decided by Google.</p></details>
       <details><summary>Does the Search Console tab have to stay open?</summary><p>Yes, and you must stay signed in. It is recommended to pin the tab and exclude it from Chrome’s memory saver so it does not freeze while the queue waits.</p></details>
-      <details><summary>What happens when Google’s daily quota is reached?</summary><p>The queue stops completely, and the affected URLs stay reserved until midnight, when the quota resets. Google sets the quota; the extension respects it.</p></details>
+      <details><summary>What happens when Google’s daily quota is reached?</summary><p>Google does not publish an official daily limit for indexing requests, and the extension never tries to bypass it (no account rotation, no multiple accounts). The queue stops completely, and the affected URLs stay reserved until midnight, when the quota resets. Google sets the quota; the extension respects it.</p></details>
       <details><summary>Does the developer receive my data or my URLs?</summary><p>No. Everything is kept inside your browser. Full details are in the <a href="../en/privacy/index.html">Privacy Policy</a>.</p></details>
     </div>
   </div>

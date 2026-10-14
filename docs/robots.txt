@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muhammedyasserbs.github.io/index-now/sitemap.xml
