@@ -1,0 +1,26 @@
+/* Chrome Web Store screenshot compositions — 1280x800, brand: navy #053960 / gold #c2924d */
+@font-face { font-family: "Cairo"; src: url("../../docs/assets/fonts/cairo-arabic-wght-normal.woff2") format("woff2"); font-weight: 200 1000; unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: "Cairo"; src: url("../../docs/assets/fonts/cairo-latin-wght-normal.woff2") format("woff2"); font-weight: 200 1000; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1280px; height: 800px; overflow: hidden; }
+body {
+  background: #053960;
+  color: #ffffff;
+  font-family: "Cairo", sans-serif;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+.copy { position: absolute; right: 80px; top: 150px; width: 470px; direction: rtl; text-align: right; }
+.eyebrow { display: inline-block; color: #d7ae72; font-weight: 700; font-size: 18px; letter-spacing: .02em; padding-bottom: 14px; border-bottom: 2px solid #c2924d; margin-bottom: 28px; }
+h1 { font-size: 54px; line-height: 1.22; font-weight: 800; margin-bottom: 22px; }
+.lead { font-size: 22px; line-height: 1.75; color: rgba(255,255,255,.82); font-weight: 400; }
+.points { list-style: none; margin-top: 34px; display: grid; gap: 12px; }
+.points li { font-size: 19px; color: rgba(255,255,255,.92); padding-right: 22px; position: relative; }
+.points li::before { content: ""; position: absolute; right: 0; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: #c2924d; }
+.panel {
+  position: absolute; left: 96px; top: 70px; width: 420px; height: 660px;
+  border-radius: 18px; overflow: hidden; background: #f4f7fb;
+  box-shadow: 0 34px 80px rgba(0, 0, 0, .38), 0 0 0 1px rgba(255,255,255,.08);
+}
+.panel iframe { width: 420px; height: 660px; border: 0; display: block; }
+.footer-mark { position: absolute; right: 80px; bottom: 56px; font-size: 16px; color: rgba(255,255,255,.6); direction: ltr; letter-spacing: .04em; }

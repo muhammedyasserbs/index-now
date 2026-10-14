@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IndexFlow — Bulk indexing for Google Search Console</title>
+<meta name="description" content="A Chrome extension that queues indexing requests for your URLs in Search Console, removes duplicates, controls pacing, and needs no account.">
+<meta name="theme-color" content="#053960">
+<link rel="icon" href="../assets/img/icon-192x192.png" type="image/png">
+<link rel="stylesheet" href="../assets/site.css">
+<meta property="og:title" content="IndexFlow — Bulk indexing for Google Search Console">
+<meta property="og:description" content="A Chrome extension that queues indexing requests for your URLs in Search Console, removes duplicates, controls pacing, and needs no account.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../assets/img/screenshot-4.png">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../en/index.html" aria-label="IndexFlow — Home">
+      <img src="../assets/img/icon-192x192.png" alt="" width="34" height="34">
+      <span>IndexFlow</span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation"><a class="hide-sm" href="#features">Features</a><a class="hide-sm" href="#how">How it works</a><a class="hide-sm" href="#faq">FAQ</a><a class="lang-switch" href="../index.html" hreflang="ar" lang="ar">العربية</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Chrome extension · Manifest V3</p>
+      <h1>Bulk indexing requests for your pages in Search Console, from one queue</h1>
+      <p class="lead">IndexFlow reads your sitemap or list of URLs, removes duplicates, then sends indexing requests one at a time with the delay you choose, and tracks every URL until the queue is finished.</p>
+      <div class="actions">
+        <a class="btn btn-primary" data-store-cta href="#install">Add to Chrome</a>
+        <a class="btn btn-ghost" href="../en/privacy/index.html">Privacy Policy</a>
+      </div>
+      <p class="fine">Free · No account required · Runs inside your browser</p>
+    </div>
+    <figure class="hero-media">
+      <img src="../assets/img/screenshot-4.png" alt="IndexFlow side panel showing queue statistics and the URL list" width="1280" height="800">
+    </figure>
+  </div>
+</section>
+
+<section class="facts" aria-label="Key numbers">
+  <div class="wrap facts-grid">
+    <div><strong>3</strong><span>indexing modes: New only, Re-index, or Both</span></div>
+    <div><strong>10</strong><span>seconds by default between URLs, adjustable by you</span></div>
+    <div><strong>2</strong><span>automatic attempts per URL, then a final round for deferred URLs</span></div>
+    <div><strong>0</strong><span>accounts, external servers, or user tracking</span></div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Features</p>
+      <h2>What the extension does</h2>
+      <p>Every feature listed here exists in the current version of the extension.</p>
+    </div>
+    <div class="features-grid">
+      <article class="feature"><span class="num">01</span><h3>Several sources, one queue</h3><p>Sitemaps in XML, sitemap indexes and gzip files, pasted URLs, or an uploaded TXT, CSV or JSON file. Each load is added to the queue without clearing what is already there.</p></article>
+      <article class="feature"><span class="num">02</span><h3>Smart duplicate removal</h3><p>Duplicates inside the same batch, URLs already queued, and URLs requested before are filtered out. When a clean URL and a copy with extra parameters both appear, only the clean one is kept.</p></article>
+      <article class="feature"><span class="num">03</span><h3>A mode for your goal</h3><p>“New only” sends pages that are not indexed yet. “Re-index” refreshes pages that are already indexed. “Both” combines the two in one run.</p></article>
+      <article class="feature"><span class="num">04</span><h3>Control over pacing</h3><p>A configurable delay between requests, and a safe skip for URLs that do not fit. When Google’s daily quota is reached, the queue stops completely and affected URLs stay reserved until the quota resets.</p></article>
+      <article class="feature"><span class="num">05</span><h3>Live tracking</h3><p>Live counters for each status, search and filters, one-click URL copy, a full activity log, and CSV export with an encoding that displays Arabic correctly in Excel.</p></article>
+      <article class="feature"><span class="num">06</span><h3>Safe stop on failure</h3><p>The extension watches the Search Console tab. If the tab is closed or frozen, the queue stops safely, the active URL returns to waiting, and the log explains what happened.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">How it works</p><h2>Four steps, in the same order as the panel</h2></div>
+    <div class="steps">
+      <div class="step"><span class="num">01</span><h3>Source</h3><p>Paste a sitemap URL or a list of URLs, or upload a file with one URL per line.</p></div>
+      <div class="step"><span class="num">02</span><h3>Load</h3><p>URLs are read, duplicates are removed, and the batch is added to the queue with a summary.</p></div>
+      <div class="step"><span class="num">03</span><h3>Settings</h3><p>Choose the indexing mode and the delay between URLs. Your settings are saved on your device.</p></div>
+      <div class="step"><span class="num">04</span><h3>Index</h3><p>Press “Start queue” and keep the Search Console tab open and signed in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0" aria-label="Screenshots from the extension">
+  <div class="wrap screens">
+    <figure><img src="../assets/img/screenshot-1.png" alt="Step one: entering a sitemap or URLs" width="1280" height="800" loading="lazy"></figure>
+    <figure><img src="../assets/img/screenshot-2.png" alt="Load summary with new and duplicate URL counts" width="1280" height="800" loading="lazy"></figure>
+    <figure><img src="../assets/img/screenshot-3.png" alt="Indexing mode and delay settings" width="1280" height="800" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="band section" aria-labelledby="privacy-title">
+  <div class="wrap band-grid">
+    <div>
+      <p class="eyebrow">Privacy</p>
+      <h2 id="privacy-title">Privacy is part of the design</h2>
+      <p style="margin-top:16px;color:#c9d6e3">IndexFlow needs no account and sends no data to the developer’s servers. Everything the extension needs is stored on your device. The full policy is available below.</p>
+      <div class="actions"><a class="btn btn-ghost" href="../en/privacy/index.html">Read the Privacy Policy</a></div>
+    </div>
+    <ul>
+      <li>No accounts, no sign-up, no user tracking.</li>
+      <li>Settings, queue and activity log stay in your browser.</li>
+      <li>The extension talks only to the Search Console tab you open and to the sitemap sites you enter.</li>
+      <li>You can erase all data from inside the extension, or by removing it from Chrome.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="install">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Install</p><h2>Install it the way that suits you</h2></div>
+    <div class="install-grid">
+      <div>
+        <h3>From the Chrome Web Store</h3>
+        <p>The recommended way. One click adds the extension, and it updates automatically with each new release.</p>
+        <a class="btn btn-primary" data-store-cta href="#install">Add to Chrome</a>
+      </div>
+      <div>
+        <h3>Manually, for developers</h3>
+        <ol>
+          <li>Download the <code>index-flow</code> folder from <a href="https://github.com/muhammedyasserbs/index-now/tree/main/index-flow" target="_blank" rel="noopener">GitHub</a>.</li>
+          <li>Open <code>chrome://extensions</code> and enable Developer mode.</li>
+          <li>Click “Load unpacked” and select the folder.</li>
+        </ol>
+      </div>
+      <div>
+        <h3>Requirements</h3>
+        <ul>
+          <li>Google Chrome 116 or later.</li>
+          <li>Signed in to Search Console with an account that has access to the site.</li>
+          <li>The Search Console tab open while the queue runs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">FAQ</p><h2>Common questions</h2></div>
+    <div class="faq">
+      <details><summary>Is IndexFlow free?</summary><p>Yes. There is no paid plan and no hidden limit inside the extension.</p></details>
+      <details><summary>Does it guarantee that pages will appear in search results?</summary><p>No. IndexFlow only submits indexing requests. Whether and how a page is indexed or ranked is decided by Google.</p></details>
+      <details><summary>Does the Search Console tab have to stay open?</summary><p>Yes, and you must stay signed in. It is recommended to pin the tab and exclude it from Chrome’s memory saver so it does not freeze while the queue waits.</p></details>
+      <details><summary>What happens when Google’s daily quota is reached?</summary><p>The queue stops completely, and the affected URLs stay reserved until midnight, when the quota resets. Google sets the quota; the extension respects it.</p></details>
+      <details><summary>Does the developer receive my data or my URLs?</summary><p>No. Everything is kept inside your browser. Full details are in the <a href="../en/privacy/index.html">Privacy Policy</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="dev">
+        <img src="../assets/img/avatar.jpg" alt="Muhammed Yasser" width="46" height="46">
+        <div>
+          <strong>IndexFlow — Muhammed Yasser</strong>
+          <a href="https://www.linkedin.com/in/muhammed-yasser-seo-specialist/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Site links">
+        <a href="../en/privacy/index.html">Privacy Policy</a>
+        <a href="../en/terms/index.html">Terms of Use</a>
+        <a href="../en/index.html#install">Install</a>
+      </nav>
+    </div>
+    <p class="disclaimer">IndexFlow is an independent tool. It is not affiliated with, endorsed by, or sponsored by Google. Google Search Console is a trademark of Google LLC.</p>
+    <p class="copy">&copy; <span data-year>2026</span> IndexFlow. All rights reserved.</p>
+  </div>
+</footer>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>
