@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IndexFlow — فهرسة جماعية لروابط Google Search Console</title>
-<meta name="description" content="إضافة Chrome لإرسال طلبات فهرسة لروابط موقعك من Search Console بطابور منظم، مع استبعاد المكرر، وتحكم كامل في الفاصل الزمني، وبدون حساب.">
+<title>IndexFlow — طلب فهرسة جماعي لروابط Google Search Console (سيرش كونسول)</title>
+<meta name="description" content="إضافة Chrome لطلب فهرسة روابط موقعك في Google Search Console (سيرش كونسول) من طابور منظم، مع استبعاد المكرر والتحكم في الفاصل الزمني، وبدون حساب.، مع استبعاد المكرر، وتحكم كامل في الفاصل الزمني، وبدون حساب.">
 <meta name="theme-color" content="#053960">
 <link rel="icon" href="assets/img/icon-192x192.png" type="image/png">
 <link rel="stylesheet" href="assets/site.css">
-<meta property="og:title" content="IndexFlow — فهرسة جماعية لروابط Google Search Console">
-<meta property="og:description" content="إضافة Chrome لإرسال طلبات فهرسة لروابط موقعك من Search Console بطابور منظم، مع استبعاد المكرر، وتحكم كامل في الفاصل الزمني، وبدون حساب.">
+<meta property="og:title" content="IndexFlow — طلب فهرسة جماعي لروابط Google Search Console (سيرش كونسول)">
+<meta property="og:description" content="إضافة Chrome لطلب فهرسة روابط موقعك في Google Search Console (سيرش كونسول) من طابور منظم، مع استبعاد المكرر والتحكم في الفاصل الزمني، وبدون حساب.، مع استبعاد المكرر، وتحكم كامل في الفاصل الزمني، وبدون حساب.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/img/screenshot-4.png">
 
@@ -141,6 +141,9 @@
     <div class="section-head"><p class="eyebrow">الأسئلة الشائعة</p><h2>أسئلة يسألها الجميع</h2></div>
     <div class="faq">
       <details><summary>هل الإضافة مجانية؟</summary><p>نعم. لا يوجد اشتراك مدفوع ولا حدود مخفية داخل الإضافة.</p></details>
+      <details><summary>ازاي أطلب فهرسة صفحة في جوجل؟</summary><p>من Search Console تفحص الرابط ثم تضغط «طلب فهرسة». لو عندك صفحات كتير، IndexFlow بيعمل الخطوات دي لكل رابط في طابور واحد، بدل ما تكررها يدوياً.</p></details>
+      <details><summary>ليه جوجل لا يفهرس موقعي؟</summary><p>أسباب شائعة: الصفحة عليها وسم noindex، أو محجوبة بملف robots.txt، أو محتواها قليل أو مكرر، أو مفيش روابط داخلية توصل لها. ابدأ بفحص الصفحة في Search Console قبل ما تطلب الفهرسة، لأن الطلب وحده ما يضمنش شيئاً.</p></details>
+      <details><summary>هل فيه API رسمي من جوجل لطلب فهرسة أي صفحة؟</summary><p>لا. واجهة Indexing API الرسمية مخصصة لصفحات JobPosting وBroadcastEvent فقط. IndexFlow بيشتغل على واجهة Search Console نفسها ولا يستخدم أي API.</p></details>
       <details><summary>هل تضمن الإضافة ظهور الصفحات في نتائج البحث؟</summary><p>لا. الإضافة ترسل طلبات الفهرسة فقط، وقرار الفهرسة والترتيب بيد Google.</p></details>
       <details><summary>هل يجب أن يبقى تبويب Search Console مفتوحاً؟</summary><p>نعم، ويجب أن تكون مسجل الدخول فيه أثناء التشغيل. يُنصح بتثبيت التبويب واستبعاده من وضع توفير الذاكرة في Chrome، حتى لا يتجمد أثناء الانتظار.</p></details>
       <details><summary>ماذا يحدث عند بلوغ حصة Google اليومية؟</summary><p>يتوقف الطابور بالكامل، وتبقى الروابط المتأثرة محجوزة حتى منتصف الليل حين تتجدد الحصة. حدود الحصة تحددها Google، والإضافة تحترمها ولا تتجاوزها.</p></details>

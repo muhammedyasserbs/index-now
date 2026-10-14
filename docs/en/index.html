@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IndexFlow — Bulk indexing for Google Search Console</title>
-<meta name="description" content="A Chrome extension that queues indexing requests for your URLs in Search Console, removes duplicates, controls pacing, and needs no account.">
+<title>IndexFlow — Bulk indexing requests for Google Search Console</title>
+<meta name="description" content="A Chrome extension that queues Google Search Console indexing requests for your URLs, removes duplicates, controls pacing, and needs no account., removes duplicates, controls pacing, and needs no account.">
 <meta name="theme-color" content="#053960">
 <link rel="icon" href="../assets/img/icon-192x192.png" type="image/png">
 <link rel="stylesheet" href="../assets/site.css">
-<meta property="og:title" content="IndexFlow — Bulk indexing for Google Search Console">
-<meta property="og:description" content="A Chrome extension that queues indexing requests for your URLs in Search Console, removes duplicates, controls pacing, and needs no account.">
+<meta property="og:title" content="IndexFlow — Bulk indexing requests for Google Search Console">
+<meta property="og:description" content="A Chrome extension that queues Google Search Console indexing requests for your URLs, removes duplicates, controls pacing, and needs no account., removes duplicates, controls pacing, and needs no account.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="../assets/img/screenshot-4.png">
 
@@ -135,6 +135,10 @@
     <div class="section-head"><p class="eyebrow">FAQ</p><h2>Common questions</h2></div>
     <div class="faq">
       <details><summary>Is IndexFlow free?</summary><p>Yes. There is no paid plan and no hidden limit inside the extension.</p></details>
+      <details><summary>How do I request indexing for many pages at once in Google Search Console?</summary><p>IndexFlow queues the URLs you load and runs the same request steps for each one in Search Console, one at a time, with the delay you set. You don’t have to repeat the steps manually for every URL.</p></details>
+      <details><summary>Why isn’t Google indexing my pages?</summary><p>Common causes: a noindex tag, a block in robots.txt, thin or duplicate content, or no internal links pointing to the page. Check each page with URL Inspection in Search Console first. A request alone does not guarantee indexing.</p></details>
+      <details><summary>Is there an official Google API to request indexing for any URL?</summary><p>No. Google’s official Indexing API is for JobPosting and BroadcastEvent pages only. IndexFlow works through the Search Console interface itself and does not use an API.</p></details>
+      <details><summary>How long does Google indexing take?</summary><p>There is no guaranteed timeline. Google does not publish one, and processing can take hours or weeks.</p></details>
       <details><summary>Does it guarantee that pages will appear in search results?</summary><p>No. IndexFlow only submits indexing requests. Whether and how a page is indexed or ranked is decided by Google.</p></details>
       <details><summary>Does the Search Console tab have to stay open?</summary><p>Yes, and you must stay signed in. It is recommended to pin the tab and exclude it from Chrome’s memory saver so it does not freeze while the queue waits.</p></details>
       <details><summary>What happens when Google’s daily quota is reached?</summary><p>The queue stops completely, and the affected URLs stay reserved until midnight, when the quota resets. Google sets the quota; the extension respects it.</p></details>
